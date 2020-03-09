@@ -1,0 +1,528 @@
+*{
+	padding: 0px;
+	margin: 0px;	
+/*	border: 1px solid red;*/
+}
+body{
+	overflow-x: hidden;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 5px;  
+    height: 110px;  
+    background-color: #F5F5F5;  
+}  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+} 
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);  
+    background:rgba(0, 0, 0, 0.8);  
+}  
+/*滑块效果*/
+/*::-webkit-scrollbar-thumb:hover
+{
+border-radius: 5px;
+-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+background: rgba(0,0,0,1);
+}*/
+/*IE滚动条颜色*/
+html {
+    scrollbar-face-color:#bfbfbf;/*滚动条颜色*/
+    scrollbar-highlight-color:#000;
+    scrollbar-3dlight-color:#000;
+    scrollbar-darkshadow-color:#000;
+    scrollbar-Shadow-color:#adadad;/*滑块边色*/
+    scrollbar-arrow-color:rgba(0,0,0,0.4);/*箭头颜色*/
+    scrollbar-track-color:#eeeeee;/*背景颜色*/
+}  
+#BackgroundImage
+{
+	width: 100%;
+	height: 100%;
+	/*border: 1px solid red;*/
+	position: fixed;
+	background-image: url(../Image/backgroundImage.jpg);
+	background-repeat: no-repeat;
+	z-index: -1;
+	background-size: cover;
+	top: 0px;
+}
+#headIndexBox
+{
+	height: 35px;
+	width: 100%;
+	background:rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0px;
+	z-index: 500;
+}
+#headIndexBox #indexBox
+{
+	width: 1140px;
+	height: 30px;
+	margin: 0 auto;
+/*	margin-top: 5px;*/
+}
+#headIndexBox #indexBox li
+{
+	width: 100px;
+	height: 30px;
+/*	border: 1px solid red;*/
+}
+#headIndexBox #indexBox li a
+{
+	height: 30px;
+	display: block;
+/*	border: 1px solid red;*/
+	text-align: center;
+	padding-top: 5px;
+/*	background-color: blue;*/
+}
+#headIndexBox #indexBox .indexBoxContent
+{
+	width: 150px;
+	height: 0px;
+	position: relative;
+	overflow: hidden;
+/*	float: left;*/
+}
+#headIndexBox #indexBox .indexBoxContent ul
+{
+	width: 150px;
+	height: 240px;
+	position: absolute;
+	top: -250px;
+	background:rgba(0, 0, 0, 0.3);
+/*	border: 1px solid red;*/
+}
+#headIndexBox #indexBox .indexBoxContent ul li
+{
+	width: 150px;
+	height: 35px;
+	/*border: 1px solid red;*/
+	list-style: none;
+	text-align: center;
+	padding-top: 5px;
+/*	margin-top: 10px;*/
+}
+#headIndexBox #indexBox li
+{
+	float: left;
+	list-style: none;
+}
+#headIndexBox #indexBox li a
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+}
+#headIndexBox #indexBox ul a
+{
+	color: #000000;
+}
+#headBackgroundImage
+{
+	width: 1536px;
+	height: 320px;
+	background-image: url(../Image/Head.png);
+	float: left;
+	position: relative;
+}
+#headBackgroundImage #headUserindetBox
+{
+	width: 1140px;
+	height: 140px;
+/*	border: 1px solid red;*/
+	margin: 0 auto;
+	margin-top: 150px;
+	position: relative;
+	z-index: 100;
+}
+#headBackgroundImage #headUserindetBox #headUserindet
+{
+	width: 200px;
+	height: 100px;
+	margin: 0 auto;
+}
+#headBackgroundImage #headUserindetBox #headUserindet a
+{
+	user-select: none;
+	text-decoration: none;
+	color: #ffffff;
+}
+#headBackgroundImage #headUserindetBox #headUserindet #subject
+{
+	width: 100%;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#headBackgroundImage #headUserindetBox #headUserindet #username
+{
+	width: 100%;
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: 300;
+	text-align: center;
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#headBackgroundImage #overLoadBackground
+{
+	width: 100%;
+	height: 320px;
+	position: absolute;
+	top: 0px;
+	background: rgba(0, 0, 0, 0.1);
+	z-index: 10;
+}
+
+#mainBackgroundBox
+{
+	clear: both;
+	width: 100%;
+	height: 5700px;
+/*	border: 1px solid red;*/
+}
+#mainBackgroundBox #mainBackground
+{
+	width: 1140px;
+	height: 5700px;
+	margin: 0 auto;
+/*	border: 1px solid red;*/
+}
+#mainBackgroundBox #mainBackground #mainBackground_left
+{
+	width: 750px;
+	height: 5700px;
+	float: left;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL
+{
+	width: 750px;
+	height: 5600px;
+	float: left;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli
+{
+	width: 750px;
+	height: 350px;
+	list-style: none;
+	border-radius: 30px;
+	border: 1px solid #666;
+	margin-top: 20px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image
+{
+	width: 100%;
+	height: 320px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	overflow: hidden;
+	position: relative;
+	/*background-color: blue;*/
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .Main_image_background
+{
+	width: 100%;
+	height: 320px;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 0px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject
+{
+	width: 750px;
+	height: 100px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 80px;
+	text-align: center;
+	z-index: 100;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainPackage
+{
+	width: 400px;
+	height: 100px;
+/*	padding-left: 10px;
+	padding-right: 10px;*/
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	position: relative;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainPackage .MainNewPackage
+{
+	width: 400px;
+	height: 50px;
+/*	padding-left: 10px;
+	padding-right: 10px;*/
+	/*border: 1px solid red;*/
+	position: relative;
+	top: 50px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainSubject_subject
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	/*border: 1px solid red;*/
+	background-color: blue;
+	margin-top: 13px;
+	float: left;
+	overflow: hidden;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainSubject_subject a
+{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 12px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainSubject_context
+{
+	font-size: 30px;
+	margin-left: 20px;
+	float: left;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+	text-shadow: 0px 0px 3px #ffffff;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubject .MainSubject_context a
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubjectContext
+{
+	width: 700px;
+	height: 100px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 150px;
+	text-align: center;
+	margin-left: 20px;
+	overflow: hidden;
+	z-index: 50;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_image .MainSubjectContext .inMainSubjectContext
+{
+	width: 100%;
+	height: 50px;
+	color: #ffffff;
+	font-weight: 100;
+	/*border: 1px solid red;*/
+	position: relative;
+	top: 100px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index
+{
+	width: 100%;
+	height: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-color: #ffffff;
+	float: left;
+}
+
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index ul
+{
+	margin-left: 15px;
+	margin-top: 3px;
+}
+
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index ul li
+{
+	padding-right: 10px;
+	padding-left: 10px;
+	list-style: none;
+	float: left;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index ul li a
+{
+	text-decoration: none;
+	color: #666;
+	font-size: 12px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index #readIndex
+{
+	float: left;
+	width: 50px;
+
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #mainBackgroundUL .mainBackgroundli .Main_index #readIndex
+ a
+ {
+ 	text-decoration: none;
+ 	font-size: 12px;
+ 	color: #666;
+ }
+#mainBackgroundBox #mainBackground #mainBackground_left #JumpButBox
+{
+	width: 100%;
+	height: 100px;
+	/*border: 1px solid red;*/
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #JumpButBox ul
+{
+	width: 300px;
+	margin: 0 auto;
+}
+
+#mainBackgroundBox #mainBackground #mainBackground_left #JumpButBox ul li
+{
+	list-style: none;
+	background: rgba(255, 255, 255, 0.5);
+	float: left;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 30px;
+}
+#mainBackgroundBox #mainBackground #mainBackground_left #JumpButBox ul li a
+{
+	display: block;
+	width: 30px;
+	height: 26px;
+	text-decoration: none;
+	color: #666;
+	padding-top: 4px;
+}
+
+#mainBackground_right
+{
+	width: 200px;
+	height: 2000px;
+	margin-left: 50px;
+	/*border: 1px solid red;*/
+	float: left;
+}
+#mainBackground_right .NewsBox
+{
+	width: 350px;
+	height: 250px;
+	border-radius: 12px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+	float: left;
+}
+#mainBackground_right .NewsBox .NewsBoxPackage
+{
+	width: 300px;
+	height: 350px;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	margin-top: 20px;
+	overflow: hidden;
+}
+#mainBackground_right .NewsBox .NewsBoxContent
+{
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 2px solid #c0c0c0;
+}
+#mainBackground_right .NewsBox .NewsBoxContent li
+{
+	width: 100px;
+	height: 35px;
+	/*border: 1px solid red;*/
+	list-style: none;
+	float: left;
+	padding-top: 10px;
+	text-align: center;
+}
+#mainBackground_right .NewsBox .NewsBoxContent li a
+{
+	text-decoration: none;
+	color: #caaaaa;
+}
+#mainBackground_right .NewsBox .NewsBoxPackage .NewsContent
+{
+
+}
+#mainBackground_right .NewsBox .NewsBoxPackage .NewsContent li
+{
+	width: 100%;
+	height: 30px;
+	list-style: none;
+	padding-left: 10px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+#mainBackground_right .NewsBox .NewsBoxPackage .NewsContent li a
+{
+	text-decoration: none;
+	color: #c66666;
+}
+#mainBackground_right .NewsBox #NewsBoxBackgroundImage
+{
+	width: 100%;
+	height: 150px;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+#mainBackground_right .NewsBox #NewsBoxHeadImage
+{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	margin-top: -50px;
+	overflow: hidden;
+}
+#mainBackground_right .NewsBox #NewsBoxHeadImage img
+{
+	display: block;
+	margin-left: -10px;
+}
+#mainBackground_right .NewsBox #NewBoxContxt
+{
+	width: 300px;
+	height: 100%;
+/*	border: 1px solid red;*/
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 100;
+}
+#buttom
+{
+	widows: 1536px;
+	height: 200px;
+	background: rgba(0, 0, 0,  0.8);
+	overflow: hidden;
+}
+#buttom #buttomContext
+{
+	width: 1000px;
+	height: 200px;
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+/*	position: absolute;*/
+
+	margin-top: 50px;
+}
+#buttom #buttomContext div
+{
+	color: #fff;
+	font-weight: 10;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
